@@ -39,7 +39,7 @@ class User extends BaseController
         if(session()->get('level')== 1) {
             $model=new M_user();
             $where=array('id_user'=>$id);
-            $user=array('password'=>md5('12345'));
+            $user=array('password'=>md5('1'));
             $model->qedit('user', $user, $where);
 
             
