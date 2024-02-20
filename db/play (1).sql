@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2024 at 08:52 AM
+-- Generation Time: Feb 20, 2024 at 09:06 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `play`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis`
+--
+
+CREATE TABLE `jenis` (
+  `id_jenis` int(11) NOT NULL,
+  `nama_jenis` text NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `jenis`
+--
+
+INSERT INTO `jenis` (`id_jenis`, `nama_jenis`, `created_at`) VALUES
+(2, 'Mandi Bola', '2024-02-20 00:38:49'),
+(3, 'Trampolin', '2024-02-20 00:47:36');
 
 -- --------------------------------------------------------
 
@@ -47,6 +67,29 @@ INSERT INTO `level` (`id_level`, `nama_level`, `created_at`, `updated_at`, `dele
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tarif`
+--
+
+CREATE TABLE `tarif` (
+  `id_tarif` int(11) NOT NULL,
+  `harga` text NOT NULL,
+  `jenis` int(11) NOT NULL,
+  `menit` time NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tarif`
+--
+
+INSERT INTO `tarif` (`id_tarif`, `harga`, `jenis`, `menit`, `created_at`) VALUES
+(2, '15000', 2, '00:30:00', '2024-02-20 01:26:58'),
+(4, '10000', 3, '00:15:00', '2024-02-20 01:59:51'),
+(5, '5000', 3, '00:05:00', '2024-02-20 02:05:50');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -69,7 +112,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `email`, `level`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Admin', 'Admin', 'c4ca4238a0b923820dcc509a6f75849b', 'admin@gmail.com', 1, 'default.png', '2024-01-27 14:27:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'Petugas', 'Petugas', '0cc175b9c0f1b6a831c399e269772661', 'petugas@gmail.com', 2, 'default.png', '2024-01-27 02:55:31', '2024-01-27 03:12:07', '0000-00-00 00:00:00'),
+(2, 'Petugas', 'Petugas', 'c4ca4238a0b923820dcc509a6f75849b', 'petugas@gmail.com', 2, 'default.png', '2024-01-27 02:55:31', '2024-01-27 03:12:07', '0000-00-00 00:00:00'),
 (4, 'Darrell', 'Darrell', 'c4ca4238a0b923820dcc509a6f75849b', 'darrell@gmail.com', 3, 'default.png', '2024-01-29 09:28:41', '2024-01-29 09:28:41', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -107,10 +150,22 @@ INSERT INTO `website` (`id_website`, `nama_website`, `logo_website`, `logo_pdf`,
 --
 
 --
+-- Indexes for table `jenis`
+--
+ALTER TABLE `jenis`
+  ADD PRIMARY KEY (`id_jenis`);
+
+--
 -- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
+
+--
+-- Indexes for table `tarif`
+--
+ALTER TABLE `tarif`
+  ADD PRIMARY KEY (`id_tarif`);
 
 --
 -- Indexes for table `user`
@@ -129,10 +184,22 @@ ALTER TABLE `website`
 --
 
 --
+-- AUTO_INCREMENT for table `jenis`
+--
+ALTER TABLE `jenis`
+  MODIFY `id_jenis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tarif`
+--
+ALTER TABLE `tarif`
+  MODIFY `id_tarif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`

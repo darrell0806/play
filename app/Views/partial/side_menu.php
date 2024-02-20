@@ -87,7 +87,27 @@ $logo = $builder->select('logo_website')
             </li>
 
           
-              
+            <li class="sidebar-title">Operasional PlayGround</li>
+
+<li class="sidebar-item <?php if($uri->getSegment(1) == "jenis"){echo "active";}?>">
+  <a href="<?=base_url('jenis')?>" class='sidebar-link'>
+    <i class="fa-solid fa-list"></i>
+    <span>Data Jenis Permainan</span>
+  </a>
+</li>
+
+<li class="sidebar-item <?php if($uri->getSegment(1) == "tarif"){echo "active";}?>">
+  <a href="<?=base_url('tarif')?>" class='sidebar-link'>
+    <i class="fa-regular fa-bank"></i>
+    <span>Data Tarif</span>
+  </a>
+</li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "bill"){echo "active";}?>">
+  <a href="<?=base_url('bill')?>" class='sidebar-link'>
+    <i class="fa-regular fa-wallet"></i>
+    <span>Data Billing</span>
+  </a>
+</li>
             </ul>
           </div>
         </div>

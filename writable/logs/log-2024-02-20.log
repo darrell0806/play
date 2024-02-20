@@ -1,0 +1,53 @@
+ERROR - 2024-02-20 00:31:42 --> Table 'play.kelas' doesn't exist
+CRITICAL - 2024-02-20 00:31:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\zone\app\Controllers\jenis.php(12): App\Models\M_model->tampil('kelas')
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->index()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-20 00:32:05 --> Table 'play.kelas' doesn't exist
+CRITICAL - 2024-02-20 00:32:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\zone\app\Controllers\jenis.php(12): App\Models\M_model->tampil('kelas')
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->index()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-20 00:32:07 --> Table 'play.kelas' doesn't exist
+CRITICAL - 2024-02-20 00:32:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\zone\app\Controllers\jenis.php(12): App\Models\M_model->tampil('kelas')
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->index()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-20 00:32:38 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\zone\app\Controllers\jenis.php on line 28
+#0 C:\xampp\htdocs\zone\app\Controllers\jenis.php(28): view('partial/header_...', NULL)
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->tambah_jenis()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-20 00:34:39 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\zone\app\Controllers\jenis.php on line 28
+#0 C:\xampp\htdocs\zone\app\Controllers\jenis.php(28): view('partial/header_...', NULL)
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->tambah_jenis()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-20 00:35:50 --> Invalid file: jenis/edit_jenis.php
+#0 C:\xampp\htdocs\zone\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('jenis/edit_jeni...')
+#1 C:\xampp\htdocs\zone\system\Common.php(1089): CodeIgniter\View\View->render('jenis/edit_jeni...', Array, true)
+#2 C:\xampp\htdocs\zone\app\Controllers\jenis.php(65): view('jenis/edit_jeni...', Array)
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\jenis->edit_jenis('1')
+#4 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\jenis))
+#5 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
