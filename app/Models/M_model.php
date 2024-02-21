@@ -218,6 +218,16 @@ class M_model extends Model
         $query = $builder->get();
         return $query->getResult();
     }
+    public function joi($table1, $table2, $table3, $table4, $on1, $on2, $on3){
+        return $this->db->table($table1)
+            ->join($table2, $on1, 'left')
+            ->join($table3, $on2, 'left')
+            ->join($table4, $on3, 'left')
+            ->groupBy("$table1.id_bill") // Mengelompokkan berdasarkan kolom unik
+            ->orderBy("$table1.created_at", 'desc') 
+            ->get()
+            ->getResult();
+    }
     
     public function join8($table1, $table2, $table3, $table4, $table5, $table6,$table7,$table8,$on1, $on2, $on3,$on4,$on5,$on6,$on7)
     {

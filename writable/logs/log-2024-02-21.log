@@ -1,0 +1,45 @@
+ERROR - 2024-02-21 00:39:40 --> Unknown column 'jenis' in 'from clause'
+CRITICAL - 2024-02-21 00:39:40 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\zone\app\Controllers\bill.php(16): App\Models\M_model->join3('bill', 'tarif', 'user', 'jenis', 'bill.tarif = ta...', 'bill.user = use...', 'tarif.jenis = j...')
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\bill->index()
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill))
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-21 00:41:10 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::join() must be of the type string, null given, called in C:\xampp\htdocs\zone\app\Models\M_model.php on line 224
+#0 C:\xampp\htdocs\zone\app\Models\M_model.php(224): CodeIgniter\Database\BaseBuilder->join('user', NULL, 'left')
+#1 C:\xampp\htdocs\zone\app\Controllers\bill.php(18): App\Models\M_model->joi('bill', 'tarif', 'user', 'jenis', 'bill.tarif = ta...', NULL, NULL)
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\bill->index()
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill))
+#4 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-21 00:45:50 --> Call to a member function groupBy() on array
+#0 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\bill->index()
+#1 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill))
+#2 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-02-21 00:50:29 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\zone\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\zone\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\zone\app\Controllers\bill.php(22): CodeIgniter\Model->__call('joi', Array)
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\bill->index()
+#4 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill))
+#5 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-02-21 00:51:56 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\zone\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\zone\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\zone\app\Controllers\bill.php(16): CodeIgniter\Model->__call('joi', Array)
+#3 C:\xampp\htdocs\zone\system\CodeIgniter.php(832): App\Controllers\bill->index()
+#4 C:\xampp\htdocs\zone\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill))
+#5 C:\xampp\htdocs\zone\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\zone\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\zone\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

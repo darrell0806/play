@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2024 at 09:06 AM
+-- Generation Time: Feb 21, 2024 at 08:51 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `play`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bill`
+--
+
+CREATE TABLE `bill` (
+  `id_bill` int(11) NOT NULL,
+  `user` int(11) NOT NULL,
+  `tarif` int(11) NOT NULL,
+  `status` text NOT NULL,
+  `jam_m` datetime NOT NULL,
+  `jam_k` datetime NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bill`
+--
+
+INSERT INTO `bill` (`id_bill`, `user`, `tarif`, `status`, `jam_m`, `jam_k`, `created_at`) VALUES
+(1, 1, 2, 'In', '2024-02-21 13:13:21', '2024-02-21 07:13:21', '0000-00-00 00:00:00'),
+(2, 1, 5, 'Out', '2024-02-21 13:13:21', '2024-02-21 07:13:21', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -150,6 +174,12 @@ INSERT INTO `website` (`id_website`, `nama_website`, `logo_website`, `logo_pdf`,
 --
 
 --
+-- Indexes for table `bill`
+--
+ALTER TABLE `bill`
+  ADD PRIMARY KEY (`id_bill`);
+
+--
 -- Indexes for table `jenis`
 --
 ALTER TABLE `jenis`
@@ -182,6 +212,12 @@ ALTER TABLE `website`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `bill`
+--
+ALTER TABLE `bill`
+  MODIFY `id_bill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `jenis`

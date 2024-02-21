@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_model;
 
-class bill extends BaseController
+class bill2 extends BaseController
 {
     
 public function index()
@@ -18,7 +18,7 @@ public function index()
     echo view('partial/header_datatable', $data);
     echo view('partial/side_menu');
     echo view('partial/top_menu');
-    echo view('bill/v_bill',$data);
+    echo view('bill/v_bill2',$data);
     echo view('partial/footer_datatable');
 
 }

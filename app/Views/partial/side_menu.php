@@ -102,6 +102,12 @@ $logo = $builder->select('logo_website')
     <span>Data Tarif</span>
   </a>
 </li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "bill2"){echo "active";}?>">
+  <a href="<?=base_url('bill2')?>" class='sidebar-link'>
+    <i class="fa-regular fa-wallet"></i>
+    <span>Data Billing Admin</span>
+  </a>
+</li>
 <li class="sidebar-item <?php if($uri->getSegment(1) == "bill"){echo "active";}?>">
   <a href="<?=base_url('bill')?>" class='sidebar-link'>
     <i class="fa-regular fa-wallet"></i>
