@@ -43,7 +43,10 @@
 
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="<?=base_url('assets/extensions/sweetalert2/sweetalert2.min.css')?>"/>
-
+    <link
+      rel="stylesheet"
+      href="<?=base_url('assets/extensions/choices.js/public/assets/styles/choices.css')?>"
+    />
     <style>
         @media print {
             @page {

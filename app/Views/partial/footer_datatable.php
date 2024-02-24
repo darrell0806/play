@@ -20,7 +20,8 @@
     <script src="<?=base_url('assets/static/js/components/dark.js')?>"></script>
     <script src="<?=base_url('assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js')?>"></script>
     <script src="<?=base_url('assets/compiled/js/app.js')?>"></script>
-
+    <script src="<?php echo base_url('assets/extensions/choices.js/public/assets/scripts/choices.js')?>"></script>
+    <script src="<?php echo base_url('assets/static/js/pages/form-element-select.js')?>"></script>
     <!-- DataTables -->
     <script src="<?=base_url('assets/extensions/jquery/jquery.min.js')?>"></script>
     <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
@@ -69,7 +70,25 @@
       // Panggil fungsi untuk memulai timer otomatis logout
       startLogoutTimer();
     </script>
-    <!-- Log Out Otomatis -->
+      
+  
+<script>
+  let inactivityTime = 900000; // 15 menit dalam milidetik
+let timer;
+
+function resetTimer() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+        location.reload(); // Me-refresh halaman jika tidak ada aktivitas selama 15 menit
+    }, inactivityTime);
+}
+
+window.addEventListener('mousemove', resetTimer);
+window.addEventListener('click', resetTimer);
+window.addEventListener('keypress', resetTimer);
+resetTimer(); // Memulai timer inaktivitas saat halaman dimuat
+
+  </script>
     
   </body>
   </html>

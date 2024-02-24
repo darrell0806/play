@@ -21,7 +21,7 @@
     <section class="section">
       <div class="card">
         <div class="card-header">
-          <a href="<?=base_url('/bill/tambah_bill/')?>">
+          <a href="<?=base_url('/bill2/tambah/')?>">
             <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>
             Tambah</button>
           </a>
@@ -57,8 +57,7 @@
                     <td><?php echo $b->jam_m?> </td>
                     <td><?php echo $b->jam_k?> </td>
                     <td>
-                      <a href="<?=base_url('/bill/edit_bill/'.$b->id_bill)?>"><button class="btn btn-primary">Edit</button></a>
-                      <a href="<?=base_url('/bill/delete_bill/'.$b->id_bill)?>"><button class="btn btn-danger">Delete</button></a>    
+                      <a href="<?=base_url('/bill2/delete_bill/'.$b->id_bill)?>"><button class="btn btn-danger">Delete</button></a>    
                     </td>
 
                   </tr>
@@ -73,4 +72,3 @@
     </section>
     <!-- Basic Tables end -->
   </div>
-

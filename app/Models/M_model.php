@@ -10,8 +10,21 @@ class M_model extends Model
         ->get()
         ->getResult();
     }
-    
-    
+    public function getAllRombel() {
+        return $this->db->table('tarif')
+        ->select('tarif.harga, tarif.id_tarif,jenis.nama_jenis, tarif.menit')
+        ->join('jenis', 'jenis.id_jenis = tarif.jenis')
+        ->get()
+        ->getResult();
+    }
+    public function getById($table, $id)
+{
+    return $this->db->table($table)
+                    ->where('id_tarif', $id)
+                    ->get()
+                    ->getRow();
+}
+
     public function geta()
     {
         return $this->findAll();
@@ -127,14 +140,7 @@ class M_model extends Model
         }
         
         
-        public function getAllRombel() {
-            return $this->db->table('rombel')
-            ->select('rombel.nama_r, rombel.id_rombel,kelas.nama_kelas, jurusan.nama_jurusan')
-            ->join('kelas', 'kelas.id_kelas = rombel.kelas')
-            ->join('jurusan', 'jurusan.id_jurusan = rombel.jurusan')
-            ->get()
-            ->getResult();
-        }
+       
         public function joinuser($table1, $table2, $table3, $on1, $on2)
         {
             return $this->db->table($table1)
@@ -219,15 +225,43 @@ class M_model extends Model
         return $query->getResult();
     }
     public function joi($table1, $table2, $table3, $table4, $on1, $on2, $on3){
-        return $this->db->table($table1)
+        date_default_timezone_set('Asia/Jakarta');
+        $current_time = date('H:i'); // Jam dan menit sekarang
+        $query = $this->db->table($table1)
             ->join($table2, $on1, 'left')
             ->join($table3, $on2, 'left')
             ->join($table4, $on3, 'left')
+            ->select($table1 . '.*, ' . 
+                      $table2 . '.harga AS harga, ' . 
+                      $table2 . '.menit AS menit, ' . 
+                      $table4 . '.nama_jenis AS nama_jenis, ' . 
+                      $table2 . '.jenis AS jenis, ' . 
+                      $table3 . '.nama AS nama', FALSE)
+            ->select('CASE WHEN TIME_FORMAT("' . $current_time . '", "%H:%i") >= TIME_FORMAT(' . $table1 . '.jam_m, "%H:%i") 
+                             AND TIME_FORMAT("' . $current_time . '", "%H:%i") <= TIME_FORMAT(' . $table1 . '.jam_k, "%H:%i") THEN "In"
+                           ELSE "Out" END AS status', FALSE)
             ->groupBy("$table1.id_bill") // Mengelompokkan berdasarkan kolom unik
             ->orderBy("$table1.created_at", 'desc') 
-            ->get()
-            ->getResult();
+            ->get();
+        
+        $result = $query->getResult();
+    
+        foreach ($result as $row) {
+            $this->db->table($table1)
+                     ->where('id_bill', $row->id_bill) // Ubah ini sesuai dengan kolom yang unik
+                     ->update(['status' => $row->status]);
+        }
+    
+        return $result;
     }
+    
+    
+    
+    
+    
+    
+    
+
     
     public function join8($table1, $table2, $table3, $table4, $table5, $table6,$table7,$table8,$on1, $on2, $on3,$on4,$on5,$on6,$on7)
     {
@@ -286,15 +320,34 @@ class M_model extends Model
             WHERE ".$table.".created_at BETWEEN '".$awal."' AND '".$akhir."'
             ")->getResult();
     }
-    public function filterbku($table, $awal, $akhir)
+    public function filterbku($table1, $table2, $table3, $table4, $on1, $on2, $on3, $awal, $akhir)
     {
-        return $this->db->query("
-            SELECT *
-            FROM ".$table."
-            INNER JOIN kategori ON ".$table.".kategori = kategori.id_kategori
-            WHERE ".$table.".created_at BETWEEN '".$awal."' AND '".$akhir."'
-            ")->getResult();
+        
+    
+        $query = $this->db->table($table1)
+            ->join($table2, $on1, 'left')
+            ->join($table3, $on2, 'left')
+            ->join($table4, $on3, 'left')
+            ->select($table1 . '.*, ' .
+                $table2 . '.harga AS harga, ' .
+                $table2 . '.menit AS menit, ' .
+                $table1 . '.status AS status, ' .
+                $table4 . '.nama_jenis AS nama_jenis, ' .
+                $table2 . '.jenis AS jenis, ' .
+                $table3 . '.nama AS nama', FALSE)
+            ->where($table1 . '.created_at BETWEEN "' . $awal . '" AND "' . $akhir . '"')
+            ->groupBy("$table1.id_bill") // Mengelompokkan berdasarkan kolom unik
+            ->orderBy("$table1.created_at", 'desc')
+            ->get();
+    
+        $result = $query->getResult();
+    
+        
+    
+        return $result;
     }
+ 
+
     public function simpanDataNilai($data)
 {
     // Lakukan operasi penyimpanan ke dalam tabel nilai

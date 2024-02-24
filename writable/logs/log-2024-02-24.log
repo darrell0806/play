@@ -1,0 +1,10 @@
+CRITICAL - 2024-02-24 04:41:12 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Controllers\bill2.php(87): CodeIgniter\Model->__call('checkStatusChan...', Array)
+#3 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->check_status()
+#4 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#5 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#8 {main}

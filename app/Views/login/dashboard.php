@@ -58,8 +58,8 @@ $namaweb = $builder->select('nama_website')
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <h4>Galeri PlayGorund</h4>
-                <p>Berikut ini beberapa Galeri PlayGorund.</p>
+                <h4>Galeri PlayGround</h4>
+                <p>Berikut ini beberapa Galeri PlayGround.</p>
               </div>
 
               <div class="card-body">
@@ -80,8 +80,8 @@ $namaweb = $builder->select('nama_website')
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <h4>Galeri PlayGorund</h4>
-                <p>Berikut ini beberapa Galeri PlayGorund.</p>
+                <h4>Galeri PlayGround</h4>
+                <p>Berikut ini beberapa Galeri PlayGround.</p>
               </div>
 
               <div class="card-body">

@@ -105,7 +105,7 @@ $logo = $builder->select('logo_website')
 <li class="sidebar-item <?php if($uri->getSegment(1) == "bill2"){echo "active";}?>">
   <a href="<?=base_url('bill2')?>" class='sidebar-link'>
     <i class="fa-regular fa-wallet"></i>
-    <span>Data Billing Admin</span>
+    <span>Tambah Billing</span>
   </a>
 </li>
 <li class="sidebar-item <?php if($uri->getSegment(1) == "bill"){echo "active";}?>">
@@ -114,6 +114,17 @@ $logo = $builder->select('logo_website')
     <span>Data Billing</span>
   </a>
 </li>
+<li class="sidebar-title">Laporan Penjualan</li>
+
+<li class="sidebar-item <?php if($uri->getSegment(1) == "laporan"){echo "active";}?>">
+  <a href="<?=base_url('laporan')?>" class='sidebar-link'>
+    <i class="fa-solid fa-book"></i>
+    <span>Laporan Penjualan</span>
+  </a>
+</li>
+
+
+
             </ul>
           </div>
         </div>
@@ -137,136 +148,34 @@ $logo = $builder->select('logo_website')
            
           
 
-            <li class="sidebar-title">Data Barang</li>
+            <li class="sidebar-title">Operasional PlayGround</li>
 
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "book"){echo "active";}?>">
-                      <a href="<?=base_url('book')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-book"></i>
-                        <span>Data Buku</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>">
-                      <a href="<?=base_url('peminjaman')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Data Peminjaman</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "kategori"){echo "active";}?>">
-                  <a href="<?=base_url('kategori')?>" class='sidebar-link'>
-                    <i class="fa-solid fa-list"></i>
-                    <span>Data Kategori</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "koleksi"){echo "active";}?>">
-                  <a href="<?=base_url('koleksi')?>" class='sidebar-link'>
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Data Koleksi</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "comment"){echo "active";}?>">
-                  <a href="<?=base_url('comment')?>" class='sidebar-link'>
-                    <i class="fa-solid fa-comment"></i>
-                    <span>Data Comment</span>
-                  </a>
-                </li> 
-                <li class="sidebar-title">Laporan</li>
 
-                
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan_book"){echo "active";}?>">
-                  <a href="<?=base_url('laporan_book')?>" class='sidebar-link'>
-                    <i class="fa-regular fa-book"></i>
-                    <span>Laporan Buku</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan_peminjaman"){echo "active";}?>">
-                  <a href="<?=base_url('laporan_peminjaman')?>" class='sidebar-link'>
-                    <i class="fa-regular fa-book"></i>
-                    <span>Laporan Peminjaman</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan_pengembalian"){echo "active";}?>">
-                  <a href="<?=base_url('laporan_pengembalian')?>" class='sidebar-link'>
-                    <i class="fa-regular fa-book"></i>
-                    <span>Laporan Pengembalian</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan_koleksi"){echo "active";}?>">
-                  <a href="<?=base_url('laporan_koleksi')?>" class='sidebar-link'>
-                    <i class="fa-regular fa-heart"></i>
-                    <span>Laporan Koleksi</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan_comment"){echo "active";}?>">
-                  <a href="<?=base_url('laporan_comment')?>" class='sidebar-link'>
-                    <i class="fa-regular fa-comment"></i>
-                    <span>Laporan Comment</span>
-                  </a>
-                </li>
-                  </li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "bill2"){echo "active";}?>">
+  <a href="<?=base_url('bill2')?>" class='sidebar-link'>
+    <i class="fa-regular fa-wallet"></i>
+    <span>Tambah Billing</span>
+  </a>
+</li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "bill"){echo "active";}?>">
+  <a href="<?=base_url('bill')?>" class='sidebar-link'>
+    <i class="fa-regular fa-wallet"></i>
+    <span>Data Billing</span>
+  </a>
+</li>
+<li class="sidebar-title">Laporan Penjualan</li>
 
-                </li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "laporan"){echo "active";}?>">
+  <a href="<?=base_url('laporan')?>" class='sidebar-link'>
+    <i class="fa-solid fa-book"></i>
+    <span>Laporan Penjualan</span>
+  </a>
+</li>
               
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Menu Guru  -------------------------------------------------------------------------------------------->
-
-    <?php }else if (session()->get('level')==3){ ?>
-      <div class="sidebar-menu">
-          <ul class="menu">
-            <li class="sidebar-title">Menu</li>
-
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-              <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
-                <i class="fa-solid fa-grid-2"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-
-           
-           
-          
-
-            <li class="sidebar-title">Data Barang</li>
-
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "book"){echo "active";}?>">
-                      <a href="<?=base_url('book')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-book"></i>
-                        <span>Data Buku</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>">
-                      <a href="<?=base_url('peminjaman')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Data Peminjaman</span>
-                      </a>
-                    </li>
-                 
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "koleksi"){echo "active";}?>">
-                  <a href="<?=base_url('koleksi')?>" class='sidebar-link'>
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Data Koleksi</span>
-                  </a>
-                </li>
-                <li class="sidebar-item <?php if($uri->getSegment(1) == "comment"){echo "active";}?>">
-                  <a href="<?=base_url('comment')?>" class='sidebar-link'>
-                    <i class="fa-solid fa-comment"></i>
-                    <span>Data Comment</span>
-                  </a>
-                </li> 
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
+      
 <?php } ?>
