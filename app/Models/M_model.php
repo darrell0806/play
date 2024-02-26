@@ -260,7 +260,39 @@ class M_model extends Model
     
     
     
+    public function joi2($table1, $table2, $table3, $table4, $on1, $on2, $on3){
+        date_default_timezone_set('Asia/Jakarta');
+        $current_time = date('H:i'); // Jam dan menit sekarang
+        $today = date('Y-m-d'); // Tanggal hari ini
+
+        $query = $this->db->table($table1)
+            ->join($table2, $on1, 'left')
+            ->join($table3, $on2, 'left')
+            ->join($table4, $on3, 'left')
+            ->where('DATE(' . $table1 . '.created_at)', $today) // Hanya ambil data yang created_at-nya adalah tanggal hari ini
+            ->select($table1 . '.*, ' . 
+                      $table2 . '.harga AS harga, ' . 
+                      $table2 . '.menit AS menit, ' . 
+                      $table4 . '.nama_jenis AS nama_jenis, ' . 
+                      $table2 . '.jenis AS jenis, ' . 
+                      $table3 . '.nama AS nama', FALSE)
+            ->select('CASE WHEN TIME_FORMAT("' . $current_time . '", "%H:%i") >= TIME_FORMAT(' . $table1 . '.jam_m, "%H:%i") 
+                             AND TIME_FORMAT("' . $current_time . '", "%H:%i") <= TIME_FORMAT(' . $table1 . '.jam_k, "%H:%i") THEN "In"
+                           ELSE "Out" END AS status', FALSE)
+            ->groupBy("$table1.id_bill") // Mengelompokkan berdasarkan kolom unik
+            ->orderBy("$table1.created_at", 'desc') 
+            ->get();
+        
+        $result = $query->getResult();
     
+        foreach ($result as $row) {
+            $this->db->table($table1)
+                     ->where('id_bill', $row->id_bill) // Ubah ini sesuai dengan kolom yang unik
+                     ->update(['status' => $row->status]);
+        }
+    
+        return $result;
+    }
 
     
     public function join8($table1, $table2, $table3, $table4, $table5, $table6,$table7,$table8,$on1, $on2, $on3,$on4,$on5,$on6,$on7)
@@ -346,7 +378,29 @@ class M_model extends Model
     
         return $result;
     }
- 
+    public function filterhari($table1, $table2, $table3, $table4, $on1, $on2, $on3, $tanggal)
+    {
+        $query = $this->db->table($table1)
+            ->join($table2, $on1, 'left')
+            ->join($table3, $on2, 'left')
+            ->join($table4, $on3, 'left')
+            ->select($table1 . '.*, ' .
+                $table2 . '.harga AS harga, ' .
+                $table2 . '.menit AS menit, ' .
+                $table1 . '.status AS status, ' .
+                $table4 . '.nama_jenis AS nama_jenis, ' .
+                $table2 . '.jenis AS jenis, ' .
+                $table3 . '.nama AS nama', FALSE)
+            ->where("DATE($table1.created_at) = '$tanggal'")
+            ->groupBy("$table1.id_bill") // Mengelompokkan berdasarkan kolom unik
+            ->orderBy("$table1.created_at", 'desc')
+            ->get();
+    
+        $result = $query->getResult();
+    
+        return $result;
+    }
+    
 
     public function simpanDataNilai($data)
 {
@@ -354,6 +408,16 @@ class M_model extends Model
     $builder = $this->db->table('nilai');
     $builder->insertBatch($data);
 }
+public function getbillById($id) {
+    return $this->db->table('bill')
+                ->join('user', 'user.id_user = bill.user', 'left')
+                ->join('tarif', 'tarif.id_tarif = bill.tarif', 'left')
+                ->join('jenis', 'jenis.id_jenis = tarif.jenis', 'left')
+                ->where('user', $id)
+                ->get()
+                ->getResult();
+}
+
 
     public function getDataByFilter22($rombel)
     {
@@ -889,8 +953,8 @@ public function filtersip($table, $awal, $akhir)
         return $this->db->query("
             SELECT *
             FROM ".$table."
-            INNER JOIN siswa ON ".$table.".siswa = siswa.id_siswa
-            WHERE ".$table.".tanggal BETWEEN '".$awal."' AND '".$akhir."'
+            INNER JOIN tarif ON ".$table.".tarif = tarif.id_tarif
+            WHERE ".$table.".created_at BETWEEN '".$awal."' AND '".$akhir."'
             ")->getResult();
     }
     public function getPaymentDataBySiswaId($id_siswa)

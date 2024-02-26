@@ -81,6 +81,6 @@ public function delete_bill($id)
 		$model->hapus('bill',$where);
 		return redirect()->to('/bill2');
 	}
-
+  
 
 }
