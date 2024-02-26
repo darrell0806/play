@@ -30,8 +30,10 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Foto Profil</th>
+                                    <th>Kode</th>       
                                     <th>Username</th>       
                                     <th>Nama</th>
+                                    <th>Nama Ortu</th>       
                                     <th>E-mail</th>
                                     <th>Level</th>
                                     <th>Action</th>
@@ -46,8 +48,10 @@
                                     <td style="width: 100px; height: 100px; overflow: hidden; border-radius: 5px;">
                                         <img src="<?php echo base_url('images/' . $riz->foto) ?>" style="width: 100%; height: 100%; object-fit: contain;" alt="Foto">
                                     </td>
+                                    <td><?php echo $riz->kode ?></td>
                                     <td><?php echo $riz->username ?></td>
                                     <td><?php echo $riz->nama ?></td>
+                                    <td><?php echo $riz->nama_ortu ?></td>
                                     <td><?php echo $riz->email ?></td>
                                     <td><?php echo $riz->nama_level?></td>
                                     <td>

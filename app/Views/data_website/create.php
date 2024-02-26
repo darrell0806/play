@@ -75,34 +75,42 @@
 
 							<div class="mb-3">
 								<label for="komplek_perusahaan" class="form-label">Komplek Perusahaan</label>
-								<input type="text" class="form-control" id="komplek_perusahaan" placeholder="Masukkan Komplek Perusahaan" name="komplek_perusahaan" required>
+								<input type="text" class="form-control" id="komplek_perusahaan" placeholder="Masukkan Komplek Perusahaan" name="komplek" required>
 							</div>
 						</div>
 
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="jalan_perusahaan" class="form-label">Jalan Perusahaan</label>
-								<input type="text" class="form-control" id="jalan_perusahaan" placeholder="Masukkan Jalan Perusahaan" name="jalan_perusahaan" required>
+								<input type="text" class="form-control" id="jalan_perusahaan" placeholder="Masukkan Jalan Perusahaan" name="jalan" required>
 							</div>
 
 							<div class="mb-3">
 								<label for="kelurahan_perusahaan" class="form-label">Kelurahan Perusahaan</label>
-								<input type="text" class="form-control" id="kelurahan_perusahaan" placeholder="Masukkan Kelurahan Perusahaan" name="kelurahan_perusahaan" required>
+								<input type="text" class="form-control" id="kelurahan_perusahaan" placeholder="Masukkan Kelurahan Perusahaan" name="kelurahan" required>
 							</div>
 
 							<div class="mb-3">
 								<label for="kecamatan_perusahaan" class="form-label">Kecamatan Perusahaan</label>
-								<input type="text" class="form-control" id="kecamatan_perusahaan" placeholder="Masukkan Kecamatan Perusahaan" name="kecamatan_perusahaan" required>
+								<input type="text" class="form-control" id="kecamatan_perusahaan" placeholder="Masukkan Kecamatan Perusahaan" name="kecamatan" required>
 							</div>
 
 							<div class="mb-3">
 								<label for="kota_perusahaan" class="form-label">Kota Perusahaan</label>
-								<input type="text" class="form-control" id="kota_perusahaan" placeholder="Masukkan Kota Perusahaan" name="kota_perusahaan" required>
+								<input type="text" class="form-control" id="kota_perusahaan" placeholder="Masukkan Kota Perusahaan" name="kota" required>
 							</div>
 
 							<div class="mb-3">
 								<label for="kode_pos_perusahaan" class="form-label">Kode Pos Perusahaan</label>
-								<input type="text" class="form-control" id="kode_pos_perusahaan" placeholder="Masukkan Kode Pos Perusahaan" name="kode_pos_perusahaan" required>
+								<input type="text" class="form-control" id="kode_pos_perusahaan" placeholder="Masukkan Kode Pos Perusahaan" name="kode_pos" required>
+							</div>
+							<div class="mb-3">
+								<label for="kode_pos_perusahaan" class="form-label">Nomor Telepon Perusahaan</label>
+								<input type="text" class="form-control" id="kode_pos_perusahaan" placeholder="Masukkan Nomor Telepon Perusahaan" name="nomor" required>
+							</div>
+							<div class="mb-3">
+								<label for="kode_pos_perusahaan" class="form-label">Email Perusahaan</label>
+								<input type="text" class="form-control" id="kode_pos_perusahaan" placeholder="Masukkan Email Perusahaan" name="email_p" required>
 							</div>
 						</div>
 
