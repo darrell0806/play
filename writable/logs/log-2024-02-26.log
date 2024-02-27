@@ -219,3 +219,15 @@ CRITICAL - 2024-02-26 11:18:14 --> Call to a member function getResult() on bool
 #4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
 #6 {main}
+CRITICAL - 2024-02-26 23:55:55 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\play\app\Views\add\tambah_add.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 64, Array)
+#1 C:\xampp\htdocs\play\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\play\system\Common.php(1089): CodeIgniter\View\View->render('add/tambah_add', Array, true)
+#4 C:\xampp\htdocs\play\app\Controllers\Add.php(39): view('add/tambah_add', Array)
+#5 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->create()
+#6 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#7 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

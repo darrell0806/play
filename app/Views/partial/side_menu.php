@@ -120,6 +120,12 @@ $logo = $builder->select('logo_website')
     <span>Data Pengeluaran</span>
   </a>
 </li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "add"){echo "active";}?>">
+  <a href="<?=base_url('add')?>" class='sidebar-link'>
+    <i class="fa-regular fa-plus"></i>
+    <span>Data Add On</span>
+  </a>
+</li>
 <li class="sidebar-title">Laporan Penjualan</li>
 
 <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan"){echo "active";}?>">

@@ -1,0 +1,76 @@
+ERROR - 2024-02-27 12:16:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'add.*, tarif.harga AS harga, tarif.menit AS menit, jenis.nama_jenis AS nama_j...' at line 1
+CRITICAL - 2024-02-27 12:16:21 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(16): App\Models\M_model->joi2('add', 'tarif', 'bill', 'jenis', 'add.tarif = tar...', 'add.bill = bill...', 'tarif.jenis = j...')
+#1 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->index()
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-27 13:19:47 --> Unknown column 'harga' in 'field list'
+ERROR - 2024-02-27 13:23:54 --> Unknown column 'harga' in 'field list'
+ERROR - 2024-02-27 14:05:59 --> Unknown column 'add.created_at' in 'order clause'
+CRITICAL - 2024-02-27 14:05:59 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(17): App\Models\M_model->joiadd('add', 'bill', 'tarif', 'jenis', 'user', 'add.bill = bill...', 'add.tarif = tar...', 'tarif.jenis = j...', 'bill.user = use...')
+#1 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->index()
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-27 14:06:15 --> Unknown column 'add.create_at' in 'order clause'
+CRITICAL - 2024-02-27 14:06:15 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(17): App\Models\M_model->joiadd('add', 'bill', 'tarif', 'jenis', 'user', 'add.bill = bill...', 'add.tarif = tar...', 'tarif.jenis = j...', 'bill.user = use...')
+#1 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->index()
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-27 14:06:16 --> Unknown column 'add.create_at' in 'order clause'
+CRITICAL - 2024-02-27 14:06:16 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(17): App\Models\M_model->joiadd('add', 'bill', 'tarif', 'jenis', 'user', 'add.bill = bill...', 'add.tarif = tar...', 'tarif.jenis = j...', 'bill.user = use...')
+#1 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->index()
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-27 14:08:34 --> Unknown column 'created_at' in 'field list'
+CRITICAL - 2024-02-27 14:13:56 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\play\app\Controllers\Add.php(60): CodeIgniter\Model->__call('updateBill', Array)
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->aksi_tambah()
+#4 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#5 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-02-27 14:37:51 --> Unknown column 'bill' in 'where clause'
+ERROR - 2024-02-27 14:38:16 --> Unknown column 'bill' in 'where clause'
+CRITICAL - 2024-02-27 01:50:19 --> Too few arguments to function App\Controllers\add::delete(), 0 passed in C:\xampp\htdocs\play\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->delete()
+#1 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-02-27 01:51:20 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 98, Array)
+#1 C:\xampp\htdocs\play\app\Controllers\Add.php(80): App\Controllers\add->timeToMinutes(NULL)
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->delete('22')
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#4 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-27 14:53:56 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\play\app\Controllers\Add.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 99, Array)
+#1 C:\xampp\htdocs\play\app\Controllers\Add.php(80): App\Controllers\add->timeToMinutes(NULL)
+#2 C:\xampp\htdocs\play\system\CodeIgniter.php(832): App\Controllers\add->delete('21')
+#3 C:\xampp\htdocs\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\add))
+#4 C:\xampp\htdocs\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}

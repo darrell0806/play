@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Feb 2024 pada 18.34
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.29
+-- Generation Time: Feb 27, 2024 at 09:04 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bill`
+-- Table structure for table `add`
+--
+
+CREATE TABLE `add` (
+  `id_add` int(11) NOT NULL,
+  `bill` int(11) NOT NULL,
+  `tarif` int(11) NOT NULL,
+  `creted_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bill`
 --
 
 CREATE TABLE `bill` (
@@ -38,18 +51,18 @@ CREATE TABLE `bill` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `bill`
+-- Dumping data for table `bill`
 --
 
 INSERT INTO `bill` (`id_bill`, `user`, `tarif`, `status`, `jam_m`, `jam_k`, `created_at`) VALUES
-(6, 4, 4, 'Out', '2024-02-24 15:11:31', '2024-02-24 17:40:31', '2024-02-24'),
 (9, 2, 2, 'Out', '2024-02-24 17:00:02', '2024-02-24 17:30:02', '2024-02-24'),
-(10, 4, 6, 'Out', '2024-02-26 20:02:46', '2024-02-26 20:32:46', '2024-02-26');
+(10, 4, 6, 'Out', '2024-02-26 20:02:46', '2024-02-26 20:32:46', '2024-02-26'),
+(22, 7, 2, 'In', '2024-02-27 14:32:20', '2024-02-27 17:02:20', '2024-02-27');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis`
+-- Table structure for table `jenis`
 --
 
 CREATE TABLE `jenis` (
@@ -59,7 +72,7 @@ CREATE TABLE `jenis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis`
+-- Dumping data for table `jenis`
 --
 
 INSERT INTO `jenis` (`id_jenis`, `nama_jenis`, `created_at`) VALUES
@@ -70,7 +83,7 @@ INSERT INTO `jenis` (`id_jenis`, `nama_jenis`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `level`
+-- Table structure for table `level`
 --
 
 CREATE TABLE `level` (
@@ -82,7 +95,7 @@ CREATE TABLE `level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `level`
+-- Dumping data for table `level`
 --
 
 INSERT INTO `level` (`id_level`, `nama_level`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -93,7 +106,7 @@ INSERT INTO `level` (`id_level`, `nama_level`, `created_at`, `updated_at`, `dele
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengeluaran`
+-- Table structure for table `pengeluaran`
 --
 
 CREATE TABLE `pengeluaran` (
@@ -104,7 +117,7 @@ CREATE TABLE `pengeluaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengeluaran`
+-- Dumping data for table `pengeluaran`
 --
 
 INSERT INTO `pengeluaran` (`id_pengeluaran`, `keterangan`, `biaya`, `created_at`) VALUES
@@ -114,7 +127,7 @@ INSERT INTO `pengeluaran` (`id_pengeluaran`, `keterangan`, `biaya`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tarif`
+-- Table structure for table `tarif`
 --
 
 CREATE TABLE `tarif` (
@@ -126,7 +139,7 @@ CREATE TABLE `tarif` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tarif`
+-- Dumping data for table `tarif`
 --
 
 INSERT INTO `tarif` (`id_tarif`, `harga`, `jenis`, `menit`, `created_at`) VALUES
@@ -137,7 +150,7 @@ INSERT INTO `tarif` (`id_tarif`, `harga`, `jenis`, `menit`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -156,20 +169,19 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `kode`, `nama`, `nama_ortu`, `username`, `password`, `email`, `level`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 12345678, 'Admin', 'Bapak Admin', 'Admin', 'c4ca4238a0b923820dcc509a6f75849b', 'admin@gmail.com', 1, 'default.png', '2024-01-27 14:27:19', '2024-02-25 23:04:25', '0000-00-00 00:00:00'),
 (2, 87654321, 'Petugas', 'Bapak Petugas', 'Petugas', 'c4ca4238a0b923820dcc509a6f75849b', 'petugas@gmail.com', 2, 'default.png', '2024-01-27 02:55:31', '2024-02-25 23:05:13', '0000-00-00 00:00:00'),
 (4, 11223344, 'Darrell', 'Bapak Darrell', 'Darrell', 'c4ca4238a0b923820dcc509a6f75849b', 'darrell@gmail.com', 3, 'default.png', '2024-01-29 09:28:41', '2024-02-25 23:05:47', '0000-00-00 00:00:00'),
-(5, 33445566, 'a', 'a', 'a', 'c4ca4238a0b923820dcc509a6f75849b', 'ab@gmail.com', 3, 'default.png', '2024-02-26 09:58:18', '2024-02-26 09:59:17', '2024-02-26 09:59:17'),
-(6, 4534531, 'b', 'b', 'b', 'c4ca4238a0b923820dcc509a6f75849b', 'b@gmail.com', 2, 'default.png', '2024-02-26 09:59:03', '2024-02-26 09:59:11', '2024-02-26 09:59:11');
+(7, 2147483647, 'CP', 'Bapak CP', 'cpppp', 'c4ca4238a0b923820dcc509a6f75849b', 'cp@gmail.com', 3, 'default.png', '2024-02-27 00:19:01', '2024-02-27 00:19:01', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `website`
+-- Table structure for table `website`
 --
 
 CREATE TABLE `website` (
@@ -192,7 +204,7 @@ CREATE TABLE `website` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `website`
+-- Dumping data for table `website`
 --
 
 INSERT INTO `website` (`id_website`, `nama_website`, `logo_website`, `logo_pdf`, `favicon_website`, `komplek`, `jalan`, `kelurahan`, `kecamatan`, `kota`, `kode_pos`, `nomor`, `email_p`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -203,89 +215,101 @@ INSERT INTO `website` (`id_website`, `nama_website`, `logo_website`, `logo_pdf`,
 --
 
 --
--- Indeks untuk tabel `bill`
+-- Indexes for table `add`
+--
+ALTER TABLE `add`
+  ADD PRIMARY KEY (`id_add`);
+
+--
+-- Indexes for table `bill`
 --
 ALTER TABLE `bill`
   ADD PRIMARY KEY (`id_bill`);
 
 --
--- Indeks untuk tabel `jenis`
+-- Indexes for table `jenis`
 --
 ALTER TABLE `jenis`
   ADD PRIMARY KEY (`id_jenis`);
 
 --
--- Indeks untuk tabel `level`
+-- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indeks untuk tabel `pengeluaran`
+-- Indexes for table `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
   ADD PRIMARY KEY (`id_pengeluaran`);
 
 --
--- Indeks untuk tabel `tarif`
+-- Indexes for table `tarif`
 --
 ALTER TABLE `tarif`
   ADD PRIMARY KEY (`id_tarif`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indeks untuk tabel `website`
+-- Indexes for table `website`
 --
 ALTER TABLE `website`
   ADD PRIMARY KEY (`id_website`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bill`
+-- AUTO_INCREMENT for table `add`
+--
+ALTER TABLE `add`
+  MODIFY `id_add` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id_bill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_bill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT untuk tabel `jenis`
+-- AUTO_INCREMENT for table `jenis`
 --
 ALTER TABLE `jenis`
   MODIFY `id_jenis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `level`
+-- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `pengeluaran`
+-- AUTO_INCREMENT for table `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
   MODIFY `id_pengeluaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `tarif`
+-- AUTO_INCREMENT for table `tarif`
 --
 ALTER TABLE `tarif`
   MODIFY `id_tarif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `website`
+-- AUTO_INCREMENT for table `website`
 --
 ALTER TABLE `website`
   MODIFY `id_website` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

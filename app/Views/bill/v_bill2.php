@@ -36,13 +36,13 @@ if(session()->get('level')== 1){
                 <tr>
                   <th>No</th>
                   <th>Nama</th>
-                  <th>Harga</th>
+                  <!-- <th>Harga</th>
                   <th>Jenis</th>
-                  <th>Menit</th>
+                  <th>Menit</th> -->
                   <th>Status</th>
                   <th>Jam Masuk</th>
                   <th>Jam Keluar</th>
-                  <th>Countdown</th>
+                  <!-- <th>Countdown</th> -->
                   <th>Action</th>
                 </tr>
               </thead>
@@ -61,13 +61,13 @@ foreach ($a as $b) {
     <tr>
         <td><?php echo $no++ ?></td>
         <td><?php echo $b->nama?> </td>
-        <td><?php echo $b->harga?> </td>
+        <!-- <td><?php echo $b->harga?> </td>
         <td><?php echo $b->nama_jenis?> </td>
-        <td><?php echo $b->menit?> </td>
+        <td><?php echo $b->menit?> </td> -->
         <td><?php echo $b->status?> </td>
         <td><?php echo $b->jam_m?> </td>
         <td><?php echo $b->jam_k?> </td>
-        <td id="countdown_<?php echo $b->id_bill; ?>" data-time="<?php echo $difference; ?>"><?php echo $hours . " jam " . $minutes . " menit"; ?></td>
+        <!-- <td id="countdown_<?php echo $b->id_bill; ?>" data-time="<?php echo $difference; ?>"><?php echo $hours . " jam " . $minutes . " menit"; ?></td> -->
 
         <td>
         <a href="<?=base_url('/bill2/cetak/'.$b->id_bill)?>"><button class="btn btn-warning">Cetak Nota</button></a> 

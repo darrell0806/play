@@ -41,14 +41,7 @@ class M_model extends Model
     public function qedit($table, $data, $where){
         return $this->db->table($table)->update($data, $where);
     }
-    public function getStatusKoleksi($bookId)
-    {
-        $koleksiModel = new KoleksiModel();
-        $statusKoleksi = $koleksiModel->where(['book_id' => $bookId])->first();
-    
-        // Periksa apakah statusKoleksi ada, jika tidak, berikan nilai default
-        return $statusKoleksi ? $statusKoleksi['status'] : 'Default';
-    }
+   
     public function join2($table1, $table2, $on){
         return $this->db->table($table1)
         ->join($table2, $on, 'left')
@@ -107,6 +100,32 @@ class M_model extends Model
         
         return $query->get()->getResult();
     }
+    public function updateBill($idBill, $idTarif)
+{
+    date_default_timezone_set('Asia/Jakarta');
+    $tarif = $this->db->table('tarif')->getWhere(['id_tarif' => $idTarif])->getRow();
+    $bill = $this->db->table('bill')->getWhere(['id_bill' => $idBill])->getRow();
+
+    // Menghitung waktu tambahan berdasarkan menit dari tarif
+    $tarifMenit = $this->timeToMinutes($tarif->menit); // Konversi waktu dari format TIME ke menit
+    $tambahanDetik = $tarifMenit * 60; // Konversi menit ke detik
+
+    // Menghitung waktu baru jam_k
+    $jamKBaru = date('Y-m-d H:i:s', strtotime($bill->jam_k) + $tambahanDetik);
+
+    $data = array(
+        'jam_k' => $jamKBaru
+    );
+
+    $this->db->table('bill')->update($data, ['id_bill' => $idBill]);
+}
+
+private function timeToMinutes($time) {
+    $parts = explode(":", $time);
+    return ($parts[0] * 60) + $parts[1];
+}
+
+
     
     public function getAllRombelDet($id_user)
     {
@@ -213,14 +232,6 @@ class M_model extends Model
         $builder->join($table3, $on2);
         $builder->join($table4, $on3);
         
-        
-        // Add the WHERE clause for deleted_at for each table
-        $builder->where("$table1.deleted_at IS NULL");
-        $builder->where("$table2.deleted_at IS NULL");
-        $builder->where("$table3.deleted_at IS NULL");
-        $builder->where("$table4.deleted_at IS NULL");
-        
-        
         $query = $builder->get();
         return $query->getResult();
     }
@@ -293,7 +304,21 @@ class M_model extends Model
     
         return $result;
     }
-
+    public function joiadd($table1, $table2, $table3, $table4, $table5, $on1, $on2, $on3, $on4){
+        date_default_timezone_set('Asia/Jakarta');
+        $query = $this->db->table($table1)
+            ->join($table2, $on1, 'left')
+            ->join($table3, $on2, 'left')
+            ->join($table4, $on3, 'left')
+            ->join($table5, $on4, 'left')
+            ->orderBy("$table1.creted_at", 'desc')
+            ->get();
+    
+        $result = $query->getResult();
+    
+        return $result;
+    }
+    
     
     public function join8($table1, $table2, $table3, $table4, $table5, $table6,$table7,$table8,$on1, $on2, $on3,$on4,$on5,$on6,$on7)
     {
