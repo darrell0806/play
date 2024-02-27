@@ -7,7 +7,7 @@ class M_user extends Model
 {		
 	protected $table      = 'user';
 	protected $primaryKey = 'id_user';
-	protected $allowedFields = ['nama','username', 'password', 'email', 'level', 'foto'];
+	protected $allowedFields = ['nama','username', 'password', 'email', 'level', 'foto', 'kode', 'nama_ortu'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 

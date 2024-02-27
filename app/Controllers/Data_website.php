@@ -47,6 +47,14 @@ public function aksi_create()
 { 
     if(session()->get('level')== 1) {
         $a= $this->request->getPost('nama_perusahaan');
+        $b= $this->request->getPost('komplek');
+        $c= $this->request->getPost('jalan');
+        $d= $this->request->getPost('kelurahan');
+        $e= $this->request->getPost('kecamatan');
+        $f= $this->request->getPost('kota');
+        $g= $this->request->getPost('kode_pos');
+        $h= $this->request->getPost('nomor');
+        $i= $this->request->getPost('email_p');
         date_default_timezone_set('Asia/Jakarta');
 
         $logo_perusahaan= $this->request->getFile('logo_perusahaan');
@@ -79,6 +87,14 @@ public function aksi_create()
         //Yang ditambah ke user
         $data1=array(
             'nama_perusahaan'=>$a,
+            'komplek'=>$b,
+            'jalan'=>$c,
+            'kelurahan'=>$d,
+            'kecamatan'=>$e,
+            'kota'=>$f,
+            'kode_pos'=>$g,
+            'nomor'=>$h,
+            'email_p'=>$i,
             'logo_perusahaan'=>$imageName1,
             'logo_pdf_perusahaan'=>$imageName2,
             'favicon_perusahaan'=>$imageName3,
@@ -116,6 +132,14 @@ public function aksi_edit()
 { 
     if(session()->get('level')== 1) {
         $a= $this->request->getPost('nama_website');
+        $b= $this->request->getPost('komplek');
+        $c= $this->request->getPost('jalan');
+        $d= $this->request->getPost('kelurahan');
+        $e= $this->request->getPost('kecamatan');
+        $f= $this->request->getPost('kota');
+        $g= $this->request->getPost('kode_pos');
+        $h= $this->request->getPost('nomor');
+        $i= $this->request->getPost('email_p');
         $id= $this->request->getPost('id');
         date_default_timezone_set('Asia/Jakarta');
 
@@ -161,6 +185,14 @@ public function aksi_edit()
         //Yang ditambah ke user
         $data1=array(
             'nama_website'=>$a,
+            'komplek'=>$b,
+            'jalan'=>$c,
+            'kelurahan'=>$d,
+            'kecamatan'=>$e,
+            'kota'=>$f,
+            'kode_pos'=>$g,
+            'nomor'=>$h,
+            'email_p'=>$i,
             'logo_website'=>$imageName1,
             'logo_pdf'=>$imageName2,
             'favicon_website'=>$imageName3,

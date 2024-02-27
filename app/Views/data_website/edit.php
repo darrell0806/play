@@ -88,6 +88,38 @@
 								<label for="nama_website" class="form-label">Nama Website</label>
 								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Nama Website" name="nama_website" value="<?php echo $jojo->nama_website ?>" required>
 							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Komplek</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Komplek" name="komplek" value="<?php echo $jojo->komplek ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Jalan</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Jalan" name="jalan" value="<?php echo $jojo->jalan ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Kelurahan</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Kelurahan" name="kelurahan" value="<?php echo $jojo->kelurahan ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Kecamatan</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Kecamatan" name="kecamatan" value="<?php echo $jojo->kecamatan ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Kota</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Kota" name="kota" value="<?php echo $jojo->kota ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Kode Pos</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Kode Pos" name="kode_pos" value="<?php echo $jojo->kode_pos ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">Nomor Telepon</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan Nomor Telepon" name="nomor" value="<?php echo $jojo->nomor ?>" required>
+							</div>
+							<div class="mb-3">
+								<label for="nama_website" class="form-label">E-Mail</label>
+								<input type="text" class="form-control" id="nama_website" placeholder="Masukkan E-Mail" name="email_p" value="<?php echo $jojo->email_p ?>" required>
+							</div>
 						</div>
 					</div>
 

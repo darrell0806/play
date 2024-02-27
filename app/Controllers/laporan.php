@@ -49,6 +49,7 @@ class laporan extends BaseController
 		$dompdf->setPaper('A4','potrait');
 		$dompdf->render();
 		$dompdf->stream('my.pdf', array('Attachment'=>0));
+        exit();
 	}else{
 		return redirect()->to('/login');
 	}

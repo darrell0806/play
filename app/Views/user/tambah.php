@@ -41,12 +41,40 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
+                                            <label>Kode</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group has-icon-left">
+                                                <div class="position-relative">
+                                                    <input type="text" class="form-control" placeholder="Kode" name="kode"
+                                                        id="first-name-icon" required>
+                                                    <div class="form-control-icon">
+                                                        <i class="bi bi-123"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
                                             <label>Nama</label>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="form-group has-icon-left">
                                                 <div class="position-relative">
                                                     <input type="text" class="form-control" placeholder="Nama" name="nama"
+                                                        id="first-name-icon" required>
+                                                    <div class="form-control-icon">
+                                                        <i class="bi bi-person"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Nama Ortu</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group has-icon-left">
+                                                <div class="position-relative">
+                                                    <input type="text" class="form-control" placeholder="Nama Ortu" name="nama_ortu"
                                                         id="first-name-icon" required>
                                                     <div class="form-control-icon">
                                                         <i class="bi bi-person"></i>

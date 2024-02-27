@@ -7,7 +7,7 @@ class M_website extends Model
 {		
 	protected $table      = 'website';
 	protected $primaryKey = 'id_website';
-	protected $allowedFields = ['nama_website', 'logo_website', 'logo_pdf', 'favicon_website', 'komplek', 'jalan', 'kelurahan', 'kecamatan', 'kota', 'kode_pos'];
+	protected $allowedFields = ['nama_website', 'logo_website', 'logo_pdf', 'favicon_website', 'komplek', 'jalan', 'kelurahan', 'kecamatan', 'kota', 'kode_pos', 'nomor', 'email_p'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 

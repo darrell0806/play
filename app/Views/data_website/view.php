@@ -31,6 +31,14 @@
 								<tr>
 									<th>No</th>
 									<th>Nama Website</th>
+									<th>Komplek</th>
+									<th>Jalan</th>
+									<th>Kelurahan</th>
+									<th>Kecamatan</th>
+									<th>Kota</th>
+									<th>Kode Pos</th>
+									<th>Nomor Telepon</th>
+									<th>E-mail</th>
 									<th>Logo Website</th>
 									<th>Logo PDF</th>
 									<th>Logo Favicon</th>
@@ -44,6 +52,14 @@
 								<tr>
 									<td><?= $no++ ?></td>
 									<td><?php echo $riz->nama_website ?></td>
+									<td><?php echo $riz->komplek ?></td>
+									<td><?php echo $riz->jalan ?></td>
+									<td><?php echo $riz->kelurahan ?></td>
+									<td><?php echo $riz->kecamatan?></td>
+									<td><?php echo $riz->kota?></td>
+									<td><?php echo $riz->kode_pos ?></td>
+									<td><?php echo $riz->nomor?></td>
+									<td><?php echo $riz->email_p?></td>
 									<td style="width: 100px; height: 100px; overflow: hidden; border-radius: 5px;">
 										<img src="<?php echo base_url('logo/logo_website/' . $riz->logo_website) ?>" style="width: 100%; height: 100%; object-fit: contain;">
 									</td>
