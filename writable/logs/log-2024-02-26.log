@@ -1,0 +1,221 @@
+CRITICAL - 2024-02-26 07:19:05 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('join', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:20:12 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('join', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:22:03 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:22:38 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:22:43 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('1')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('1')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:22:47 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:23:02 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:24:41 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:27:33 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:27:37 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:30:01 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:30:04 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:31:37 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-26 07:32:27 --> You must set the database table to be used with your query.
+#0 D:\play\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\play\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\play\app\Models\M_model.php(380): CodeIgniter\Model->__call('table', Array)
+#3 D:\play\app\Controllers\User.php(146): App\Models\M_model->getbillById('4')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\User->detail('4')
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+ERROR - 2024-02-26 10:21:39 --> Unknown column 'created_at' in 'order clause'
+CRITICAL - 2024-02-26 10:21:39 --> Call to a member function getResult() on bool
+#0 D:\play\app\Controllers\pengeluaran.php(12): App\Models\M_model->tampil('pengeluaran')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\Pengeluaran->index()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengeluaran))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}
+CRITICAL - 2024-02-26 11:07:28 --> Invalid file: header.php
+#0 D:\play\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+#1 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('header', Array, true)
+#2 D:\play\app\Controllers\Uang.php(16): view('header')
+#3 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->index()
+#4 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#5 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#8 {main}
+CRITICAL - 2024-02-26 11:09:14 --> Invalid argument supplied for foreach()
+#0 D:\play\app\Views\laporan_semua.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\play\\app\\Vie...', 73, Array)
+#1 D:\play\system\View\View.php(210): include('D:\\play\\app\\Vie...')
+#2 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('laporan_semua', Array, true)
+#4 D:\play\app\Controllers\Uang.php(34): view('laporan_semua', Array)
+#5 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->cari_semua()
+#6 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#7 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#10 {main}
+ERROR - 2024-02-26 11:13:38 --> Unknown column 'id' in 'field list'
+CRITICAL - 2024-02-26 11:13:38 --> Call to a member function getResult() on bool
+#0 D:\play\app\Controllers\Uang.php(36): App\Models\M_laporan->getLaporanKeuangan('2024-02-01 12:0...', '2024-02-29 12:0...')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->cari_semua()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}
+ERROR - 2024-02-26 11:14:23 --> Unknown column 'harga' in 'field list'
+CRITICAL - 2024-02-26 11:14:23 --> Call to a member function getResult() on bool
+#0 D:\play\app\Controllers\Uang.php(36): App\Models\M_laporan->getLaporanKeuangan('2024-02-01 12:0...', '2024-02-29 12:0...')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->cari_semua()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}
+ERROR - 2024-02-26 11:16:37 --> Unknown column 'harga' in 'field list'
+CRITICAL - 2024-02-26 11:16:37 --> Call to a member function getResult() on bool
+#0 D:\play\app\Controllers\Uang.php(36): App\Models\M_laporan->getLaporanKeuangan('2024-02-01 12:0...', '2024-02-29 12:0...')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->cari_semua()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}
+ERROR - 2024-02-26 11:18:14 --> Unknown column 'harga' in 'field list'
+CRITICAL - 2024-02-26 11:18:14 --> Call to a member function getResult() on bool
+#0 D:\play\app\Controllers\Uang.php(36): App\Models\M_laporan->getLaporanKeuangan('2024-02-01 12:0...', '2024-02-29 12:0...')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\Uang->cari_semua()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Uang))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}

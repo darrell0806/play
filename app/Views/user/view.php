@@ -58,6 +58,7 @@
                                         <a class="btn btn-primary" href="<?php echo base_url('user/reset_password/'. $riz->id_user) ?>"><i class="faj-button fa-solid fa-key"></i>Reset Password</a>
                                         <a class="btn btn-warning" href="<?php echo base_url('user/edit/'. $riz->id_user) ?>"><i class="faj-button fa-solid fa-pencil"></i>Edit</a>
                                         <a class="btn btn-danger" href="<?php echo base_url('user/delete/'. $riz->id_user) ?>"><i class="faj-button fa-solid fa-trash"></i>Delete</a>
+                                        <a class="btn btn-success" href="<?php echo base_url('user/detail/'. $riz->id_user) ?>"><i class="faj-button fa-solid fa-list"></i>Detail</a>
                                     </td>
 
                                 <?php   }

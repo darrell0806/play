@@ -39,6 +39,7 @@ class Login extends BaseController
         if ($cek !== null) {
             session()->set('id', $cek['id_user']);
             session()->set('username', $cek['username']);
+            session()->set('nama', $cek['nama']);
             session()->set('level', $cek['level']);
             return redirect()->to('dashboard');
         }else {

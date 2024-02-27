@@ -114,6 +114,12 @@ $logo = $builder->select('logo_website')
     <span>Data Billing</span>
   </a>
 </li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "pengeluaran"){echo "active";}?>">
+  <a href="<?=base_url('pengeluaran')?>" class='sidebar-link'>
+    <i class="fa-regular fa-power-off"></i>
+    <span>Data Pengeluaran</span>
+  </a>
+</li>
 <li class="sidebar-title">Laporan Penjualan</li>
 
 <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan"){echo "active";}?>">
@@ -122,8 +128,24 @@ $logo = $builder->select('logo_website')
     <span>Laporan Penjualan</span>
   </a>
 </li>
-
-
+<li class="sidebar-item <?php if($uri->getSegment(1) == "L_hari"){echo "active";}?>">
+  <a href="<?=base_url('L_hari')?>" class='sidebar-link'>
+    <i class="fa-solid fa-book"></i>
+    <span>Laporan Penjualan Per Hari</span>
+  </a>
+</li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "L_ini"){echo "active";}?>">
+  <a href="<?=base_url('L_ini')?>" class='sidebar-link'>
+    <i class="fa-solid fa-book"></i>
+    <span>Laporan Penjualan Hari Ini</span>
+  </a>
+</li>
+<li class="sidebar-item <?php if($uri->getSegment(1) == "Uang"){echo "active";}?>">
+  <a href="<?=base_url('Uang')?>" class='sidebar-link'>
+    <i class="fa-regular fa-bank"></i>
+    <span>Laporan Keuangan</span>
+  </a>
+</li>
 
             </ul>
           </div>
@@ -144,7 +166,14 @@ $logo = $builder->select('logo_website')
               </a>
             </li>
 
-           
+            <li class="sidebar-title">Data Pengguna</li>
+
+            <li class="sidebar-item <?php if($uri->getSegment(1) == "user"){echo "active";}?>">
+              <a href="<?=base_url('user')?>" class='sidebar-link'>
+                <i class="fa-solid fa-screen-users"></i>
+                <span>Data User</span>
+              </a>
+            </li>
            
           
 

@@ -40,7 +40,17 @@ class M_user extends Model
 		->getResult();
 	}
 
-
+    public function join2WithExcludedLevels($table1, $table2, $on, $excludedLevels)
+    {
+        return $this->db->table($table1)
+            ->join($table2, $on, 'left')
+            ->where('user.deleted_at', null)
+            ->whereNotIn('user.level', $excludedLevels)
+            ->orderBy('user.level', 'asc') 
+            ->get()
+            ->getResult();
+    }
+    
 	
     public function getById($id)
     {
@@ -56,17 +66,28 @@ class M_user extends Model
         return $this->update($id, $data);
     }
     public function insertt($data, $photo)
-{
-    if ($photo && $photo->isValid()) {
-        $imageName = $photo->getRandomName();
-        $photo->move(ROOTPATH . 'public/images', $imageName);
-        $data['foto'] = $imageName;
-    } else {
-        $data['foto'] = 'default.png'; 
+    {
+        if ($photo && $photo->isValid()) {
+            $imageName = $photo->getRandomName();
+            $photo->move(ROOTPATH . 'public/images', $imageName);
+            $data['foto'] = $imageName;
+        } else {
+            $data['foto'] = 'default.png'; 
+        }
+        $data['password'] = md5($data['password']);
+        
+        // Cek session level
+        $session = session();
+        $sessionLevel = $session->get('level');
+    
+        // Jika session level adalah 2, set nilai level menjadi 3
+        if ($sessionLevel == 2) {
+            $data['level'] = 3;
+        }
+    
+        return $this->insert($data);
     }
-    $data['password'] = md5($data['password']);
-    return $this->insert($data);
-}
+    
     public function updateP($id, $data, $photo)
     {
         $findd = $this->find($id);

@@ -43,7 +43,7 @@
                                         <?php
                                         foreach ($c as $b) {
                                             ?>
-                                            <option value ="<?= $b->id_user?>"><?php echo $b->nama?>
+                                            <option value ="<?= $b->id_user?>"><?php echo $b->nama. ' - ' . $b->kode?>
                                         </option>
                                         <?php } ?>
                                     </select>
