@@ -203,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
     <!-- Basic Tables end -->
   </div>
-<<<<<<< HEAD
 	<?php
 								}else if(session()->get('level')== 2){
 									?>
@@ -279,6 +278,4 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
     <!-- Basic Tables end -->
   </div>
-=======
->>>>>>> d8daf1c6c8a4672e43a8c78d84f723f7fdce9f95
 	<?php } ?>

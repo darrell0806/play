@@ -1,3 +1,10 @@
+
+<?php
+
+$db = \Config\Database::connect();
+
+
+?>
 <div id="main-content">
     <div class="page-heading">
         <div class="page-title">
@@ -31,26 +38,31 @@
                                     <div class="row">
                                   
                                       
-                                        <div class="col-md-4">
-                                            <label>User</label>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="form-group has-icon-left">
-                                                <div class="position-relative">
-                                                <fieldset class="form-group">
-                                                <select class="choices form-select" name="user">
-                                      
-                                        <?php
-                                        foreach ($c as $b) {
-                                            ?>
-                                            <option value ="<?= $b->id_user?>"><?php echo $b->nama. ' - ' . $b->kode?>
-                                        </option>
-                                        <?php } ?>
-                                    </select>
-                                    </fieldset>
-                                        </div>
-                                        </div>
-                                        </div>
+                                    <div class="col-md-4">
+    <label>User</label>
+</div>
+<div class="col-md-8">
+    <div class="form-group has-icon-left">
+        <div class="position-relative">
+            <fieldset class="form-group">
+                <select class="choices form-select" name="user">
+                    <?php foreach ($c as $b) {
+                        // Query untuk memeriksa apakah user memiliki status "In" di tabel bill
+                        $isUserInBill = $db->table('bill')->where('user', $b->id_user)->where('status', 'In')->countAllResults() > 0;
+                        
+                        // Jika user tidak memiliki status "In" di tabel bill, tambahkan ke opsi select
+                        if (!$isUserInBill) { ?>
+                            <option value="<?= $b->id_user ?>">
+                                <?php echo $b->nama . ' - ' . $b->kode ?>
+                            </option>
+                        <?php }
+                    } ?>
+                </select>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
                                         <div class="col-md-4">
                                             <label>Jenis Permainan</label>
                                         </div>

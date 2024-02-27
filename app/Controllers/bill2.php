@@ -81,6 +81,46 @@ public function delete_bill($id)
 		$model->hapus('bill',$where);
 		return redirect()->to('/bill2');
 	}
-  
+    public function cetak($id)
+    {
+        $model = new M_model();
+    
+        // Get bill details
+        $bill = $model->db->table('bill')->getWhere(['id_bill' => $id])->getRow();
+        $user = $model->db->table('user')->getWhere(['id_user' => $bill->user])->getRow();
+    
+        // Get tariff details with jenis
+        $tarif = $model->db->table('tarif')
+            ->join('jenis', 'jenis.id_jenis = tarif.jenis')
+            ->getWhere(['tarif.id_tarif' => $bill->tarif])
+            ->getRow();
+    
+        // Get additional items
+        $adds = $model->db->table('add')
+            ->join('bill', 'bill.id_bill = add.bill')
+            ->join('tarif', 'tarif.id_tarif = add.tarif')
+            ->join('jenis', 'jenis.id_jenis = tarif.jenis')
+            ->getWhere(['add.bill' => $id])
+            ->getResult();
+    
+        // Calculate total
+        $total = $tarif->harga;
+        foreach ($adds as $add) {
+            $total += $add->harga;
+        }
+    
+        // Calculate tax
+        $tax = $total * 0.1;
+    
+        $data = [
+            'user' => $user,
+            'tarif' => $tarif,
+            'adds' => $adds,
+            'total' => $total,
+            'tax' => $tax
+        ];
+    
+        echo view('nota', $data);
+    }
 
 }

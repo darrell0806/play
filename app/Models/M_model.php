@@ -10,6 +10,34 @@ class M_model extends Model
         ->get()
         ->getResult();
     }
+    public function tampil2($table) {
+        $query = "SELECT * FROM $table WHERE NOT EXISTS (SELECT * FROM bill WHERE bill.user = $table.id_user AND bill.status = 'In') ORDER BY created_at DESC";
+        $result = $this->db->query($query)->getResult();
+        return $result;
+    }
+    
+    public function getUsernobill()
+{
+    // Subquery untuk mendapatkan user yang memiliki status "In" di tabel bill
+    $subquery = $this->db->table('bill')->select('user')->where('status', 'In')->getCompiledSelect();
+
+    // Query untuk mendapatkan user yang tidak memiliki status "In" di tabel bill
+    return $this->db->table('user')
+        ->where("id_user NOT IN ($subquery)", null, false)
+        ->get()
+        ->getResult();
+}
+
+    
+    private function isUserInBillToday($userId) {
+        $bill = $this->db->table('bill')
+            ->where('user', $userId)
+            ->where('DATE(created_at)', date('Y-m-d'))
+            ->get()
+            ->getRow();
+    
+        return $bill !== null;
+    }
     public function getAllRombel() {
         return $this->db->table('tarif')
         ->select('tarif.harga, tarif.id_tarif,jenis.nama_jenis, tarif.menit')

@@ -74,3 +74,124 @@ CRITICAL - 2024-02-27 14:53:56 --> A non-numeric value encountered
 #5 C:\xampp\htdocs\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 C:\xampp\htdocs\play\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #7 {main}
+CRITICAL - 2024-02-27 08:02:07 --> Call to a member function getCompiledSelect() on null
+#0 D:\play\system\Database\BaseBuilder.php(868): CodeIgniter\Database\BaseBuilder->buildSubquery(NULL, true)
+#1 D:\play\system\Database\BaseBuilder.php(757): CodeIgniter\Database\BaseBuilder->_whereIn('`id_user`', Object(Closure), ' NOT', 'AND ', true)
+#2 D:\play\app\Models\M_model.php(18): CodeIgniter\Database\BaseBuilder->whereNotIn('id_user', Object(Closure))
+#3 D:\play\app\Controllers\bill2.php(31): App\Models\M_model->tampil2('user')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:02:59 --> Call to a member function getCompiledSelect() on null
+#0 D:\play\system\Database\BaseBuilder.php(868): CodeIgniter\Database\BaseBuilder->buildSubquery(NULL, true)
+#1 D:\play\system\Database\BaseBuilder.php(757): CodeIgniter\Database\BaseBuilder->_whereIn('`user`', Object(Closure), ' NOT', 'AND ', true)
+#2 D:\play\app\Models\M_model.php(18): CodeIgniter\Database\BaseBuilder->whereNotIn('user', Object(Closure))
+#3 D:\play\app\Controllers\bill2.php(31): App\Models\M_model->tampil2('user')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:14:54 --> Call to a member function getCompiledSelect() on null
+#0 D:\play\system\Database\BaseBuilder.php(868): CodeIgniter\Database\BaseBuilder->buildSubquery(NULL, true)
+#1 D:\play\system\Database\BaseBuilder.php(757): CodeIgniter\Database\BaseBuilder->_whereIn('`id_user`', Object(Closure), ' NOT', 'AND ', true)
+#2 D:\play\app\Models\M_model.php(18): CodeIgniter\Database\BaseBuilder->whereNotIn('id_user', Object(Closure))
+#3 D:\play\app\Controllers\bill2.php(31): App\Models\M_model->tampil2('user')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:19:46 --> Call to a member function getCompiledSelect() on null
+#0 D:\play\system\Database\BaseBuilder.php(868): CodeIgniter\Database\BaseBuilder->buildSubquery(NULL, true)
+#1 D:\play\system\Database\BaseBuilder.php(757): CodeIgniter\Database\BaseBuilder->_whereIn('`id_user`', Object(Closure), ' NOT', 'AND ', true)
+#2 D:\play\app\Models\M_model.php(21): CodeIgniter\Database\BaseBuilder->whereNotIn('id_user', Object(Closure))
+#3 D:\play\app\Controllers\bill2.php(31): App\Models\M_model->tampil2('user')
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:21:32 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::whereNotExists()
+#0 D:\play\app\Controllers\bill2.php(31): App\Models\M_model->tampil2('user')
+#1 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#2 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#3 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#6 {main}
+CRITICAL - 2024-02-27 08:29:55 --> Call to a member function table() on null
+#0 D:\play\system\View\View.php(210): include()
+#1 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('bill/tambah', Array, true)
+#3 D:\play\app\Controllers\bill2.php(36): view('bill/tambah', Array)
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:31:31 --> Call to a member function getUsernobill() on null
+#0 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#1 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#2 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#5 {main}
+CRITICAL - 2024-02-27 08:33:17 --> Call to a member function getUsernobill() on null
+#0 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#1 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#2 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#5 {main}
+CRITICAL - 2024-02-27 08:33:43 --> Call to a member function table() on null
+#0 D:\play\system\View\View.php(210): include()
+#1 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('bill/tambah', Array, true)
+#3 D:\play\app\Controllers\bill2.php(36): view('bill/tambah', Array)
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:33:53 --> Call to a member function table() on null
+#0 D:\play\system\View\View.php(210): include()
+#1 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('bill/tambah', Array, true)
+#3 D:\play\app\Controllers\bill2.php(36): view('bill/tambah', Array)
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:35:00 --> Call to a member function table() on null
+#0 D:\play\system\View\View.php(210): include()
+#1 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('bill/tambah', Array, true)
+#3 D:\play\app\Controllers\bill2.php(36): view('bill/tambah', Array)
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
+CRITICAL - 2024-02-27 08:35:14 --> Call to a member function table() on null
+#0 D:\play\system\View\View.php(210): include()
+#1 D:\play\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\play\system\Common.php(1089): CodeIgniter\View\View->render('bill/tambah', Array, true)
+#3 D:\play\app\Controllers\bill2.php(36): view('bill/tambah', Array)
+#4 D:\play\system\CodeIgniter.php(832): App\Controllers\bill2->tambah()
+#5 D:\play\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\bill2))
+#6 D:\play\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\play\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\play\system\Commands\Server\rewrite.php(43): require_once('D:\\play\\public\\...')
+#9 {main}
